@@ -1,0 +1,48 @@
+# --- Python & Sphinx ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.pytest_cache/
+docs/_build/           # Sphinx build artifacts
+docs/.doctrees/
+
+# --- Dart & Flutter ---
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+*.native
+*.native-out
+*.plugin-symlinks
+.flutter-plugins
+.flutter-plugins-dependencies
+.dart_tool/package_config.json
+
+# --- Go (Golang) ---
+# Compiled binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+# Go directories
+bin/
+pkg/
+
+# --- Rust ---
+/target/
+**/*.rs.bk
+Cargo.lock             # Remove this line if you want to track dependencies
+
+# --- System & IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.tmp
+config/local_config.json
+.env
