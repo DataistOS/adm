@@ -27,3 +27,8 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+.. |version| replace:: |release|
+
+نسخه پروژه: |version|

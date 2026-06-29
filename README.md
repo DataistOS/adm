@@ -1,38 +1,48 @@
 # ADM (Automated Data-Goy Machine)
 
+**Automated Data-Goy Machine**; the physical arm of the "Dataist" ecosystem for decentralized and offline content distribution.
 
-## ساختار پروژه
+ADM eliminates the need for high-speed internet, providing a secure and intelligent platform for transferring data packages (movies, software, documentation) in public environments. Like an "ATM for content," this device delivers knowledge directly to the user.
+
+## Project Structure
 
 ```text
 adm/
-├── config/              # تنظیمات سیستم و شبکه
-├── docs/                # مستندات فنی (Sphinx)
-│   ├── build/           # خروجی‌های تولید شده مستندات
-│   ├── Makefile         # دستورات ساخت مستندات
-│   ├── make.bat         # اسکریپت ویندوز برای ساخت مستندات
-│   └── source/          # منابع مستندات
-│       ├── conf.py      # تنظیمات پیکربندی اسفنیکس
-│       ├── index.rst    # فایل اصلی مستندات
-│       ├── _static/     # فایل‌های ایستا (عکس‌ها، CSS)
-│       ├── _templates/  # قالب‌های سفارشی اسفنیکس
-│       └── topics/      # دسته‌بندی موضوعات فنی
+├── assets/              # Global project assets (Logo, project-wide branding)
+├── config/              # System and network configuration
+├── docs/                # Technical documentation (Sphinx)
+│   ├── assets/          # Documentation-specific assets (Diagrams, charts)
+│   ├── build/           # Generated documentation output
+│   ├── Makefile         # Documentation build commands
+│   ├── make.bat         # Windows build script
+│   └── source/          # Documentation sources
+│       ├── conf.py      # Sphinx configuration
+│       ├── index.rst    # Main documentation file
+│       ├── _static/     # Static assets (images, CSS)
+│       ├── _templates/  # Custom templates
+│       └── topics/      # Technical topics
 │           ├── architecture/
 │           ├── contributing/
 │           ├── deployment/
-│           ├── hardware/ (assembly, fabrication, specs)
-│           ├── software/ (backend, firmware, frontend)
+│           ├── hardware/
+│           ├── software/
 │           └── troubleshooting/
-├── hardware/            # فایل‌های طراحی و تولید سخت‌افزار
-│   ├── assembly/        # نقشه‌های مونتاژ
-│   └── fabrication/     # نقشه‌های ساخت بدنه (CNC/لیزر)
-├── LICENSE              # لایسنس پروژه
-├── logs/                # لاگ‌های عملیاتی و دیباگ
-├── README.md            # معرفی پروژه
-├── scripts/             # اسکریپت‌های اتوماسیون
-├── src/                 # کدهای منبع
-│   ├── backend/         # منطق سرور و مدیریت محتوا
-│   ├── firmware/        # نرم‌افزار سیستم‌های نهفته
-│   ├── frontend/        # رابط کاربری (UI)
-│   └── shared/          # توابع و کتابخانه‌های مشترک
-├── tests/               # تست‌های یکپارچه‌سازی و واحد
-└── VERSION              # نسخه فعلی پروژه
+├── hardware/            # Hardware design and manufacturing
+│   ├── assembly/        # Assembly blueprints
+│   └── fabrication/     # Fabrication files (CNC/Laser)
+├── LICENSE              # Project license
+├── logs/                # Operational and debug logs
+├── README.md            # Project introduction
+├── scripts/             # Automation scripts
+├── sim/                 # Digital Twin (3D Simulator)
+│   ├── assets/          # Simulation assets (3D models, textures, environment)
+│   ├── logic/           # Godot scripts for content movement
+│   └── bridge.py        # Python-to-Godot bridge
+├── src/                 # Source code modules
+│   ├── adm_backend/     # Content management and logic
+│   ├── adm_firmware/    # Embedded system code
+│   ├── adm_frontend/    # UI kiosk application
+│   └── adm_shared/      # Common libraries and protocol definitions
+├── tests/               # Integration and unit tests
+└── VERSION              # Current project version
+

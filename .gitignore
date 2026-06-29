@@ -6,7 +6,7 @@ __pycache__/
 env/
 venv/
 .pytest_cache/
-docs/_build/           # Sphinx build artifacts
+docs/_build/
 docs/.doctrees/
 
 # --- Dart & Flutter ---
@@ -23,26 +23,24 @@ build/
 .dart_tool/package_config.json
 
 # --- Go (Golang) ---
-# Compiled binaries
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
-# Go directories
 bin/
 pkg/
 
 # --- Rust ---
 /target/
 **/*.rs.bk
-Cargo.lock             # Remove this line if you want to track dependencies
+Cargo.lock
 
-# --- System & IDE ---
+# --- System, IDE & Project Config ---
 .DS_Store
 .vscode/
 .idea/
 *.log
 *.tmp
-config/local_config.json
 .env
+config/local_config.json
