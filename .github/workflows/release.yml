@@ -1,0 +1,18 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create ZIP
+        run: zip -r ADM-${{ github.ref_name }}.zip . -x "*.git*" "docs/_build/*" "tests/*"
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ADM-*.zip
