@@ -43,6 +43,7 @@ language = 'fa'
 # -- HTML Output Options -----------------------------------------------------
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+html_css_files = ['custom.css']
 
 # -- Theme Options & Navigation ----------------------------------------------
 html_theme_options = {
@@ -57,6 +58,7 @@ html_sidebars = {
     '**': [
         'searchbox.html',
         'navigation.html',
+	'versions.html',  # Loads the custom multi-version switcher menu
     ]
 }
 

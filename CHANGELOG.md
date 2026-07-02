@@ -1,5 +1,12 @@
 # Changelog
 
+## [v0.1.5] - 2026-07-02
+
+### Documentation
+- **UI/UX:** Optimized `custom.css` by reducing code volume by ~30% and improving selector performance.
+- **Fix:** Resolved `current_version` undefined error by implementing `versions.html` template.
+- **Config:** Refactored `conf.py` to ensure theme stability and consistent rendering.
+
 ## [0.1.4] - 2026-06-30
 
 ### Added
