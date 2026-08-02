@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.7] - 2026-08-02
+### Added
+- Modularized Go backend (`adm_backend`) implementing Clean Architecture.
+- Created dedicated `models` package for data structures (e.g., `Category`).
+- Implemented `handlers` package for business logic and HTTP endpoint controllers.
+- Added `routes` package for centralized router and endpoint management using standard `ServeMux`.
+### Changed
+- Migrated monolithic `main.go` into a clean architecture structure.
+- Updated project version to `0.1.7`.
+
 ## [0.1.6] - 2026-08-02
 ### Added
 - Initialized Flutter frontend application (`adm_frontend`) for touch screen kiosks.
