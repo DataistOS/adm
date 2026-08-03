@@ -1,22 +1,38 @@
+# General Section (Metadata)
 name: adm_frontend
-description: ""
+description: "ADM Frontend: Kiosk application for decentralized and offline content distribution"
 publish_to: 'none'
+version: 0.0.2+1
 
-version: 0.0.1+1
-
+# Environment
 environment:
   sdk: ^3.8.1
 
+# Dependencies
 dependencies:
   flutter:
     sdk: flutter
+  
+  # Icons
   cupertino_icons: ^1.0.8
+  
+  # Network
   http: ^1.6.0
 
+# Development Dependencies
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
 
+# Flutter specific configurations
 flutter:
   uses-material-design: true
+
+  # Assets & Fonts:
+  # assets:
+  #   - assets/images/
+  # fonts:
+  #   - family: Vazir
+  #     fonts:
+  #       - asset: assets/fonts/vazir.ttf

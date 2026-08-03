@@ -30,6 +30,7 @@ build/
 *.dylib
 bin/
 pkg/
+data/content/
 
 # --- Rust ---
 /target/

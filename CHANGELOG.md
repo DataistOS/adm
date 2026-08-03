@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.1.9] - 2026-08-03
+### Added
+- Implemented category-detail navigation screen (`CategoryDetailPage`) in Flutter frontend.
+- Added dynamic category cards displaying folder descriptions, file counts, and total sizes.
+- Enhanced file transfer feedback dialogs and loading indicators.
+### Changed
+- Refactored `CatalogPage` to support multi-level browsing from main categories to individual files.
+- Updated `ApiService` to fetch and parse category-based content (`CategoryContent`).
+- Updated project version to `0.1.8`.
+
+## [0.1.8] - 2026-08-03
+### Added
+- Implemented `ScanCategories` method in `ContentService` to dynamically read folder structures from local storage.
+- Added `CategoryContent` model in Go backend to structure category metadata and items.
+### Changed
+- Updated `ContentHandler` and API routes (`/api/v1/categories`) to support hierarchical category mapping.
+- Refactored `TransferFile` logic to accurately locate and copy files nested inside category subfolders.
+- Updated project version to `0.1.8`.
+
 ## [0.1.7] - 2026-08-02
 ### Added
 - Modularized Go backend (`adm_backend`) implementing Clean Architecture.
