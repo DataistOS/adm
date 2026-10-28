@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.10] - 2026-10-28
+### Added
+- Integrated custom `NyanProgressDialog` widget featuring an animated Nyan Cat and rainbow progress bar for file transfers.
+### Changed
+- Refactored `CatalogPage` transfer handling to prevent async gap issues using `mounted` checks.
+- Updated project version and added sample media files for testing kiosk transfer workflows.
+
 ## [0.1.9] - 2026-08-03
 ### Added
 - Implemented category-detail navigation screen (`CategoryDetailPage`) in Flutter frontend.

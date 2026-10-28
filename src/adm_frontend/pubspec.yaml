@@ -2,7 +2,7 @@
 name: adm_frontend
 description: "ADM Frontend: Kiosk application for decentralized and offline content distribution"
 publish_to: 'none'
-version: 0.0.2+1
+version: 0.0.3+1
 
 # Environment
 environment:

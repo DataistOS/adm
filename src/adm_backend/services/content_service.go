@@ -1,3 +1,5 @@
+// src/adm_backend/services/content_service.go
+
 package services
 
 import (

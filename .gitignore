@@ -30,7 +30,9 @@ build/
 *.dylib
 bin/
 pkg/
-data/content/
+
+# --- Application Data & Storage ---
+src/adm_backend/data
 
 # --- Rust ---
 /target/

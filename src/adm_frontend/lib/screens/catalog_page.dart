@@ -1,6 +1,9 @@
+// src/adm_frontend/lib/screens/catalog_page.dart
+
 import 'package:flutter/material.dart';
 import '../core/api_service.dart';
 import '../models/content_item.dart';
+import '../widgets/nyan_progress_dialog.dart';
 
 class CatalogPage extends StatefulWidget {
   const CatalogPage({super.key});
@@ -49,29 +52,28 @@ class _CatalogPageState extends State<CatalogPage> {
   void _handleTransfer(ContentItem item) async {
     const targetPath = './data/usb_target';
 
-    showDialog(
+    Future<bool> transferTask = ApiService.transferFile(item.id, targetPath);
+
+    bool? success = await showDialog<bool>(
       context: context,
       barrierDismissible: false,
-      builder: (context) => const Center(
-        child: CircularProgressIndicator(color: Colors.cyanAccent),
-      ),
+      builder: (context) =>
+          NyanProgressDialog(fileName: item.name, transferFuture: transferTask),
     );
 
-    bool success = await ApiService.transferFile(item.id, targetPath);
+    if (!mounted) return;
 
-    Navigator.pop(context);
-
-    if (success) {
+    if (success == true) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            'فایل "${item.name}" با موفقیت به حافظه جانبی منتقل شد!',
+            'فایل "${item.name}" با موفقیت توسط نایان کت به حافظه جانبی منتقل شد! 🐱🌈',
           ),
           backgroundColor: Colors.green,
           duration: const Duration(seconds: 3),
         ),
       );
-    } else {
+    } else if (success == false) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('خطا در انجام عملیات انتقال فایل.'),
