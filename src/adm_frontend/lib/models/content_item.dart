@@ -1,3 +1,5 @@
+// src/adm_frontend/lib/models/content_item.dart
+
 class ContentItem {
   final String id;
   final String name;

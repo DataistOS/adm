@@ -1,4 +1,7 @@
+// src/adm_frontend/lib/core/api_service.dart
+
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import '../models/content_item.dart';
 
@@ -14,7 +17,9 @@ class ApiService {
         return items.map((item) => CategoryContent.fromJson(item)).toList();
       }
     } catch (e) {
-      print('Error fetching categories: $e');
+      if (kDebugMode) {
+        print('Error fetching categories: $e');
+      }
     }
     return [];
   }
@@ -30,7 +35,9 @@ class ApiService {
         return true;
       }
     } catch (e) {
-      print('Error transferring file: $e');
+      if (kDebugMode) {
+        print('Error transferring file: $e');
+      }
     }
     return false;
   }
